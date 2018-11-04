@@ -57,7 +57,7 @@ def index1(request):
     # num_pages:总页数
     # page_range:总页数的索引范围，如: (1,10),(1,200)
     # page:     page对象（是否具有下一页；是否有上一页；）
-    current_page = request.GET.get('p')
+    current_page = request.GET.get('p',1)
     # Paginator对象
     paginator = CustomPaginator(current_page,7,USER_LIST, 10)
     try:
